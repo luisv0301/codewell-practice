@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      />
+    </noscript>
+    <title>IndieBrew</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="nav__logo">
+          <img src="Assets/Logo.svg" alt="logo" width="147" height="42" />
+        </div>
+        <img
+          role="button"
+          src="assets/Hamburger Menu.svg"
+          alt="hamburger menu"
+          aria-expanded="false"
+          class="nav__hambur-menu"
+        />
+        <ul class="nav__list">
+          <li class="nav__items">Pricing</li>
+          <li class="nav__items">Support</li>
+          <li class="nav__items nav__items--no-hover">
+            <a href="./SignUpPage.html" class="btn-primary"
+              >Get started-it's free</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <header class="header">
+        <div class="header__text">
+          <h1 class="header__tittle">Your weekly personal feed digest.</h1>
+          <p class="herader__subtittle">
+            With IndieBrew, get personal feeds from resources all around the
+            web, including Reddit, HackerNews, IndieHackers, and much more.
+          </p>
+          <a href="./SignUpPage.html" class="btn-primary"
+            >Get started-it's free</a
+          >
+          <img
+            src="Assets/User Avatars.svg"
+            alt="avatars"
+            width="227"
+            height="45"
+            class="header__avatars"
+          />
+          <p class="header__subtittle">
+            Join <span>32,642</span> IndieBrewers in curating their personal
+            digest.
+          </p>
+        </div>
+        <div class="header__img">
+          <img
+            src="Assets/Feed Mockup.png"
+            alt="tablet"
+            width="2324"
+            height="2088"
+            class="tablet"
+          />
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section__text section__text--padding-right">
+          <h2 class="section__tittle">
+            Curate your feed from dozens of resources.
+          </h2>
+          <p class="section__subtittle">
+            We cover all major platforms where one could want to curate their
+            feed from. Reddit, ProductHunt, IndieHackers, and so much more.
+          </p>
+          <a href="" class="general-link">See full list of resources →</a>
+        </div>
+        <div class="section__img">
+          <img
+            src="Assets/Social Media Icons.png"
+            alt="social media"
+            width="1472"
+            height="704"
+          />
+        </div>
+      </section>
+
+      <section class="section section--reversed">
+        <div class="section__text">
+          <h2 class="section__tittle">
+            Access your feed from the comfort of your phone.
+          </h2>
+          <p class="section__subtittle">
+            With native apps for both iOS and Android, accessing your curated
+            content has never been easier.
+          </p>
+          <a href="" class="general-link">Sign up for the waitlist →</a>
+        </div>
+        <div class="section__img">
+          <img
+            src="Assets/Phone Mockup.png"
+            alt="phone"
+            width="1956"
+            height="2032"
+            class="phone"
+          />
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__description">
+          <h4 class="footer__tittle">IndieBrew</h4>
+          <p class="footer__subtittle">
+            With IndieBrew, get personal feeds from resources all around the
+            web, including Reddit, HackerNews, and much more. Made with in the
+            UK.
+          </p>
+        </div>
+        <div class="footer__lists">
+          <ul class="footer__list">
+            <h5 class="footer__list-tittle">Sitemap</h5>
+            <li class="footer__item">Homepage</li>
+            <li class="footer__item">Pricing</li>
+          </ul>
+          <ul class="footer__list">
+            <h5 class="footer__list-tittle">Resources</h5>
+            <li class="footer__item">Support</li>
+            <li class="footer__item">Contact</li>
+            <li class="footer__item">FAQ</li>
+          </ul>
+          <ul class="footer__list">
+            <h5 class="footer__list-tittle">Company</h5>
+            <li class="footer__item">About</li>
+            <li class="footer__item">Customers</li>
+            <li class="footer__item">Blog</li>
+          </ul>
+          <ul class="footer__list">
+            <h5 class="footer__list-tittle">Portfolios</h5>
+            <li class="footer__item">HackerNews</li>
+            <li class="footer__item">Reddit</li>
+            <li class="footer__item">Twitter</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

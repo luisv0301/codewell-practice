@@ -1,0 +1,292 @@
+@import "styles/_base.scss";
+@import "styles/mixings";
+
+.wrapper {
+  max-width: 1200px;
+  padding: 5em;
+  margin-inline: auto;
+
+  @include small {
+    padding: 2em;
+  }
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &__hambur-menu {
+    display: none;
+
+    @include small {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include small {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      flex-direction: column;
+      background: white;
+      box-shadow: 0 9px 17px rgba(0, 0, 0, 0.082);
+      padding: 2em 0;
+      border-radius: 9px;
+
+      &.is-visible {
+        display: flex;
+      }
+    }
+  }
+
+  &__items {
+    display: inline-block;
+    margin-left: 2rem;
+    border-bottom: 2px solid transparent;
+    transition: all 250ms ease-in;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 2px solid #664efc;
+    }
+
+    &--no-hover {
+      border-bottom: 0;
+      &:hover {
+        border-bottom: 0;
+      }
+    }
+
+    @include small {
+      margin: 0;
+      padding: 1.5em;
+    }
+  }
+
+  &__go-back {
+    display: flex;
+    align-items: center;
+    a {
+      width: 2rem;
+      height: 2rem;
+      display: grid;
+      place-items: center;
+      margin-right: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #7575755c;
+    }
+
+    @include small {
+      h3 {
+        display: none;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 4px;
+  background-color: #664efc;
+  color: #fff;
+  text-decoration: none;
+
+  &--margin {
+    margin: 1rem 0;
+  }
+}
+
+.general-link {
+  font-weight: 800;
+  color: #664efc;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 3.5em 0;
+
+  &__text {
+    flex: 1;
+    max-width: 40ch;
+  }
+
+  &__img {
+    flex: 1;
+    align-self: center;
+
+    .tablet.animate {
+      animation: rotation 3s ease-in-out;
+    }
+  }
+
+  &__subtittle {
+    span {
+      color: #664efc;
+    }
+  }
+
+  @include medium {
+    flex-direction: column-reverse;
+  }
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 0;
+
+  &__text {
+    flex: 1;
+
+    &--padding-right {
+      padding-right: 2em;
+    }
+
+    @include small {
+      padding: 1.5em 0;
+    }
+  }
+
+  &__img {
+    flex: 1;
+
+    .phone.animate {
+      animation: rotation 3s ease-in-out;
+    }
+  }
+
+  &--reversed {
+    flex-direction: row-reverse;
+  }
+
+  @include small {
+    flex-direction: column-reverse;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 0;
+
+  &__description {
+    flex: 1;
+    max-width: 40ch;
+  }
+
+  &__lists {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include medium {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  &__list {
+    @include small {
+      padding: 0;
+    }
+  }
+
+  &__list:nth-child(3) {
+    @include medium {
+      grid-row: 2;
+    }
+  }
+
+  &__list:nth-child(4) {
+    @include medium {
+      grid-row: 2;
+    }
+  }
+
+  &__list:nth-child(even) {
+    @include small {
+      justify-self: end;
+    }
+  }
+
+  @include small {
+    flex-direction: column;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(25deg);
+  }
+
+  50% {
+    transform: rotate(-25deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    flex: 1;
+    padding-right: 2em;
+  }
+
+  @include medium {
+    flex-direction: column;
+
+    margin-top: 1.5rem;
+  }
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em;
+  background: white;
+  box-shadow: 1px 24px 54px #ecccf785;
+  border-radius: 5px;
+
+  &__tittle {
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    font-weight: 800;
+
+    &--font-weigh-400 {
+      font-weight: 400;
+    }
+  }
+
+  &__input {
+    padding: 0.4em 1em;
+    border: 1px solid #7575755c;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  @include extra-small {
+    padding: 2em 1em;
+  }
+}
